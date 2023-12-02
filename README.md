@@ -3,6 +3,7 @@
 \# INSERT ANSWERS HERE #
 
 **Question 4**
+
 **a)** Execute the code to produce the paths of two random walks. What do you observe? (10 points)
 
 The Graph maps the trajectory of an object/organism across 2-dimensional space, measured as its x and y cooridnates within this space, with time denoted by the gradient of blue of the trajectory line, from the start to the end of the walk.
@@ -27,11 +28,32 @@ This representative of brownian motion
 **Question5**
 
 **a)** Import the data for double-stranded DNA (dsDNA) viruses taken from the Supplementary Materials of the original paper into Posit Cloud (the csv file is in the `question-5-data` folder). How many rows and columns does the table have? (3 points)
-34 rows and 13 columns 
+33 rows (not including the heading row) and 13 columns 
 
 **b)** What transformation can you use to fit a linear model to the data? Apply the transformation. (3 points)
-   - Find the exponent ($\alpha$) and scaling factor ($\beta$) of the allometric law for dsDNA viruses and write the p-values from the model you obtained, are they statistically significant? Compare the values you found to those shown in **Table 2** of the paper, did you find the same values? (10 points)
-   - Write the code to reproduce the figure shown below. (10 points)
+
+There are multiple ways to transform data, but I will use a log transformation, which is in line with what the researchers did in the original paper. Log transforming this data helps to deal with the exponential value of a (alpha) in the equation
+
+**c)** Find the exponent ($\alpha$) and scaling factor ($\beta$) of the allometric law for dsDNA viruses and write the p-values from the model you obtained, are they statistically significant? Compare the values you found to those shown in **Table 2** of the paper, did you find the same values? (10 points)
+#betagrade
+low p values show how the model is a good fit 
+Why is this significant. Similar to the values obtained in the original paper
+
+**d)** Write the code to reproduce the figure shown below. (10 points)
+
+ggplot(data, aes(x = log(data$Genome.length..kb.) , y = log(data$Virion.volume..nm.nm.nm.))) +
+  geom_point() +
+  labs(x = "log[Genome length(kb)]", y = "log[Virion volume(nm3)]")+
+  geom_smooth(method="lm", se= T) +
+  theme_bw()+
+  theme(
+    text = element_text(face = "bold")
+  )
+
+**c)** What is the estimated volume of a 300 kb dsDNA virus? (4 points)
+equation= V = βL^α
+a= 1.5152 β=7.0748 L=300
+V=6697007
 
 
 
