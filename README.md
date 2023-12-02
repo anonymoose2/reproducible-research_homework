@@ -5,19 +5,35 @@
 **Question 4**
 **a)** Execute the code to produce the paths of two random walks. What do you observe? (10 points)
 
-The Graph maps the trajectory of an object/organism across 2-dimensional space, measured as its x and y cooridnates within this space, with time denoted by the gradient of blue of the trajectory line, from the start to the end of the walk 
+The Graph maps the trajectory of an object/organism across 2-dimensional space, measured as its x and y cooridnates within this space, with time denoted by the gradient of blue of the trajectory line, from the start to the end of the walk.
 There is minimal similarity between the two walks, with any clustering occuring my chance.
 Each time the code is run, new plots are generated.
-Each walk is comprised of 500 steps, with each step being the result of a runif function which gives steps of an equal distance, but in a randomised direction. This randomised direction is a result of random numbers being generated for the x and y coordinates, between the values of 0 and 2pi. This change in direction or 'angle' is purely the magnitude of change in direction of x relative to y, with the distance being h (the hypotenuse), which is kept constant at 2.5
-The time for each step is kept equal to the number of steps.
-
-Overall, this represnssts a random process
+Each walk is comprised of 500 steps, with each step being the result of a runif function which gives steps of an equal distance, but in a randomised direction. This randomised direction or 'angle' relative to the last point, is a result of random numbers being generated for the x and y coordinates, within the range of 0 and 2pi. This change in direction or 'angle' is purely the magnitude of change in direction of x relative to y, with the distance being h (the hypotenuse), which is kept constant at 0.25. The time for each step is kept equal to the number of steps that have been taken at that point. 
+Both plots use the same code and functions so are the result of the same process, but giving differnt outputs due to this randomisation of values.
+Overall, this represnts a random process.
 
 **b)** Investigate the term **random seeds**. What is a random seed and how does it work? (5 points)
 
+A random seed, is an initialising value for a pseudo-random number generator. This is used to ensure  the same values follow the seed value, meaning you can simulate a random process, while keeping it repeatable and reproducible. 
+Using random seeds makes the process/ the code reproducible 
+
 **c)** Edit the script to make a reproducible simulation of Brownian motion. Commit the file and push it to your forked `reproducible-research_homework` repo. (10 points)
 
+This representative of brownian motion
+
 **d)** Go to your commit history and click on the latest commit. Show the edit you made to the code in the comparison view (add this image to the **README.md** of the fork). (5 points)
+
+
+**Question5**
+
+**a)** Import the data for double-stranded DNA (dsDNA) viruses taken from the Supplementary Materials of the original paper into Posit Cloud (the csv file is in the `question-5-data` folder). How many rows and columns does the table have? (3 points)
+34 rows and 13 columns 
+
+**b)** What transformation can you use to fit a linear model to the data? Apply the transformation. (3 points)
+   - Find the exponent ($\alpha$) and scaling factor ($\beta$) of the allometric law for dsDNA viruses and write the p-values from the model you obtained, are they statistically significant? Compare the values you found to those shown in **Table 2** of the paper, did you find the same values? (10 points)
+   - Write the code to reproduce the figure shown below. (10 points)
+
+
 
 
 ## Instructions
