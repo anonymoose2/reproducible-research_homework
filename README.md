@@ -2,6 +2,24 @@
 
 \# INSERT ANSWERS HERE #
 
+**Question 4**
+**a)** Execute the code to produce the paths of two random walks. What do you observe? (10 points)
+
+The Graph maps the trajectory of an object/organism across 2-dimensional space, measured as its x and y cooridnates within this space, with time denoted by the gradient of blue of the trajectory line, from the start to the end of the walk 
+There is minimal similarity between the two walks, with any clustering occuring my chance.
+Each time the code is run, new plots are generated.
+Each walk is comprised of 500 steps, with each step being the result of a runif function which gives steps of an equal distance, but in a randomised direction. This randomised direction is a result of random numbers being generated for the x and y coordinates, between the values of 0 and 2pi. This change in direction or 'angle' is purely the magnitude of change in direction of x relative to y, with the distance being h (the hypotenuse), which is kept constant at 2.5
+The time for each step is kept equal to the number of steps.
+
+Overall, this represnssts a random process
+
+**b)** Investigate the term **random seeds**. What is a random seed and how does it work? (5 points)
+
+**c)** Edit the script to make a reproducible simulation of Brownian motion. Commit the file and push it to your forked `reproducible-research_homework` repo. (10 points)
+
+**d)** Go to your commit history and click on the latest commit. Show the edit you made to the code in the comparison view (add this image to the **README.md** of the fork). (5 points)
+
+
 ## Instructions
 
 The homework for this Computer skills practical is divided into 5 questions for a total of 100 points (plus an optional bonus question worth 10 extra points). First, fork this repo and make sure your fork is made **Public** for marking. Answers should be added to the # INSERT ANSWERS HERE # section above in the **README.md** file of your forked repository.
