@@ -9,6 +9,7 @@ random_walk  <- function (n_steps) {
   df <- data.frame(x = rep(NA, n_steps), y = rep(NA, n_steps), time = 1:n_steps)
   
   df[1,] <- c(0,0,1)
+  set.seed(7)
   
   for (i in 2:n_steps) {
     
