@@ -24,6 +24,8 @@ This representative of brownian motion
 
 **d)** Go to your commit history and click on the latest commit. Show the edit you made to the code in the comparison view (add this image to the **README.md** of the fork). (5 points)
 
+![image](https://github.com/eevtaylor/reproducible-research_homework/assets/150136026/b4bc5bef-ca6d-4228-82df-87521adb3084)
+
 
 **Question5**
 
@@ -47,9 +49,9 @@ summary(model)
 
 **c)** Find the exponent ($\alpha$) and scaling factor ($\beta$) of the allometric law for dsDNA viruses and write the p-values from the model you obtained, are they statistically significant? Compare the values you found to those shown in **Table 2** of the paper, did you find the same values? (10 points)
 
-low p values show how the model is a good fit.
-The p values for both 𝛼 and β, are low (2.28e-10 and 6.44e-10 respectively), which is statistically singificant.
-Why is this significant. Similar to the values obtained in the original paper
+The output of the linear model gave an intercept of exp(7.0748) = 1181.807 which is the β value. The 𝛼 value is 
+The p values for both 𝛼 and β, are low (2.28e-10 and 6.44e-10 respectively), which is statistically significant.
+These values are the same as the ones found in Table 2 of the original paper
 
 **d)** Write the code to reproduce the figure shown below. (10 points)
 
@@ -62,7 +64,13 @@ ggplot(data, aes(x = log(data$Genome.length..kb.) , y = log(data$Virion.volume..
     text = element_text(face = "bold")
   )
 
+See below for the matching figure
+![986dafef-7158-4839-84e6-2d4c8c5e07e1](https://github.com/eevtaylor/reproducible-research_homework/assets/150136026/cca195fd-8bdc-4548-bfd5-ba020cfea22c)
+
+
+
 **c)** What is the estimated volume of a 300 kb dsDNA virus? (4 points)
+
 equation= V = βL^α
 a= 1.5152 β=7.0748 L=300
 V=6697007
