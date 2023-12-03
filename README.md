@@ -6,7 +6,7 @@
 
 **a)** Execute the code to produce the paths of two random walks. What do you observe? (10 points)
 
-The Graph maps the trajectory of an object/organism across 2-dimensional space, measured as its x and y cooridnates within this space, with time denoted by the gradient of blue of the trajectory line, from the start to the end of the walk.
+Both Graphs maps the trajectory of an object/organism across 2-dimensional space, measured as its x and y cooridnates within this space, with time denoted by the gradient of blue of the trajectory line, from the start to the end of the walk.
 There is minimal similarity between the two walks, with any clustering occuring my chance.
 Each time the code is run, new plots are generated.
 Each walk is comprised of 500 steps, with each step being the result of a runif function which gives steps of an equal distance, but in a randomised direction. This randomised direction or 'angle' relative to the last point, is a result of random numbers being generated for the x and y coordinates, within the range of 0 and 2pi. This change in direction or 'angle' is purely the magnitude of change in direction of x relative to y, with the distance being h (the hypotenuse), which is kept constant at 0.25. The time for each step is kept equal to the number of steps that have been taken at that point. 
@@ -15,8 +15,8 @@ Overall, this represnts a random process.
 
 **b)** Investigate the term **random seeds**. What is a random seed and how does it work? (5 points)
 
-A random seed, is an initialising value for a pseudo-random number generator. This is used to ensure  the same values follow the seed value, meaning you can simulate a random process, while keeping it repeatable and reproducible. 
-Using random seeds makes the process/ the code reproducible 
+A random seed, is an initialising value for a pseudo-random number generator. This is used to ensure  the same values follow the seed value, meaning you can simulate a random process, while keeping it repeatable and reproducible. For example, if the seed (input) value is kept the same, the output values will be random, but will be the same every time, given that the seed value is the same. In the context of this code, this can be added using the set.seed() function before the for loop, for example i arbritraily chose the number 7 for my seed value, giving set.seed(7), this resulted in the same random walk output on the graphs.
+Overall, using random seeds makes the process/ the code reproducible.
 
 **c)** Edit the script to make a reproducible simulation of Brownian motion. Commit the file and push it to your forked `reproducible-research_homework` repo. (10 points)
 
@@ -32,11 +32,23 @@ This representative of brownian motion
 
 **b)** What transformation can you use to fit a linear model to the data? Apply the transformation. (3 points)
 
-There are multiple ways to transform data, but I will use a log transformation, which is in line with what the researchers did in the original paper. Log transforming this data helps to deal with the exponential value of a (alpha) in the equation
+There are multiple ways to transform data, but I will use a log transformation, which is in line with what the researchers did in the original paper. Log transforming this data helps to deal with the exponential value of a (alpha) in the equation. Copied below is the code I used for this:
+
+data$log.Virion.volume..nm.nm.nm. <- log(data$Virion.volume..nm.nm.nm.)
+data$log.Genome.length..kb. <- log(data$Genome.length..kb.)
+
+This means that LnL can be plotted against LnV, from the equation V=BL^a
+
+I fitted the linear model as so:
+
+model <- lm(log.Virion.volume..nm.nm.nm. ~ log.Genome.length..kb., data = data)
+summary(model)
+
 
 **c)** Find the exponent ($\alpha$) and scaling factor ($\beta$) of the allometric law for dsDNA viruses and write the p-values from the model you obtained, are they statistically significant? Compare the values you found to those shown in **Table 2** of the paper, did you find the same values? (10 points)
-#betagrade
-low p values show how the model is a good fit 
+
+low p values show how the model is a good fit.
+The p values for both 𝛼 and β, are low (2.28e-10 and 6.44e-10 respectively), which is statistically singificant.
 Why is this significant. Similar to the values obtained in the original paper
 
 **d)** Write the code to reproduce the figure shown below. (10 points)
