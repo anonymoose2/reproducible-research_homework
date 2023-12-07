@@ -31,6 +31,7 @@ This can be found in my repository as Question 4 code edits.R
 **Question5**
 
 **a)** Import the data for double-stranded DNA (dsDNA) viruses taken from the Supplementary Materials of the original paper into Posit Cloud (the csv file is in the `question-5-data` folder). How many rows and columns does the table have? (3 points)
+
 33 rows (not including the heading row) and 13 columns 
 
 **b)** What transformation can you use to fit a linear model to the data? Apply the transformation. (3 points)
@@ -50,8 +51,11 @@ summary(model)
 
 **c)** Find the exponent ($\alpha$) and scaling factor ($\beta$) of the allometric law for dsDNA viruses and write the p-values from the model you obtained, are they statistically significant? Compare the values you found to those shown in **Table 2** of the paper, did you find the same values? (10 points)
 
-The output of the linear model gave an intercept of exp(7.0748) = 1181.807 which is the β value. The 𝛼 value is 
+The output of the linear model gave an intercept of exp(7.0748) = 1181.807 which is the β value. 
+The slope is given as 1.5152 which is the 𝛼 value.
+
 The p values for both 𝛼 and β, are low (2.28e-10 and 6.44e-10 respectively), which is statistically significant.
+
 These values are the same as the ones found in Table 2 of the original paper
 
 **d)** Write the code to reproduce the figure shown below. (10 points)
@@ -65,9 +69,8 @@ ggplot(data, aes(x = log(data$Genome.length..kb.) , y = log(data$Virion.volume..
     text = element_text(face = "bold")
   )
 
-See below for the matching figure
+See below for the matching figure:
 ![986dafef-7158-4839-84e6-2d4c8c5e07e1](https://github.com/eevtaylor/reproducible-research_homework/assets/150136026/cca195fd-8bdc-4548-bfd5-ba020cfea22c)
-
 
 
 **c)** What is the estimated volume of a 300 kb dsDNA virus? (4 points)
@@ -75,6 +78,10 @@ See below for the matching figure
 equation= V = βL^α
 a= 1.5152 β=7.0748 L=300
 V=6697007
+
+TMy estimate for the volume of a 300kb dsDNA visrus is 6697007 nm^3
+
+**Bonus** (**10 points**) Explain the difference between reproducibility and replicability in scientific research. How can git and GitHub be used to enhance the reproducibility and replicability of your work? what limitations do they have? (e.g. check the platform [protocols.io](https://www.protocols.io/)).
 
 
 
