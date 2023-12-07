@@ -20,7 +20,8 @@ Overall, using random seeds makes the process/ the code reproducible.
 
 **c)** Edit the script to make a reproducible simulation of Brownian motion. Commit the file and push it to your forked `reproducible-research_homework` repo. (10 points)
 
-It edited the script to include the set.seed line of code. This is representative of brownian motion, which is a random process.
+It edited the script to include the set.seed() line of code. This is representative of brownian motion, which is a random process.
+This can be found in my repository as Question 4 code edits.R
 
 **d)** Go to your commit history and click on the latest commit. Show the edit you made to the code in the comparison view (add this image to the **README.md** of the fork). (5 points)
 
