@@ -123,3 +123,19 @@ Questions 1, 2 and 3 should be answered in the **README.md** file of the `logist
   - What is the estimated volume of a 300 kb dsDNA virus? (4 points)
 
 **Bonus** (**10 points**) Explain the difference between reproducibility and replicability in scientific research. How can git and GitHub be used to enhance the reproducibility and replicability of your work? what limitations do they have? (e.g. check the platform [protocols.io](https://www.protocols.io/)).
+
+Reproducability is the abilty to repeat the same data and the same methodology, and obtain the same results.
+
+Replicability is whether the same conclusions can be drawn, using different data,  to answer the same research question.
+
+Git and Github, being the software and website respectively, are important tools for imporving reproducibility and replicability in the scientific field.
+
+Firstly, Github allows for effective version control. This measns that any changes to data/code can be tracked, avoiding the risk of writing over old code. This also allows others to understand how the code has evolved over time.
+
+Secondly, the fact that github has oopen access means that other researchers can access code, which they can review, build upon or use as guidance, therefore increasing replicability. 
+
+Additionally, Github allows engagement from across the sceintific community, which can faciliate better communication and aknowledgement across work. However, one limitation in this area is the github is not very user-friendly, which could put off first time users, limiting the benefits of this community engagement.
+
+Github allows for branching and merging of documents/repositories, this means that different versions can be worked on, and tested for reproducibility and replicability. 
+
+Github also icnreases the replicability and reprodcibility by being an online, cloud- based platform. This means that the code and data is not tied to a particular desktop, which puts it at risk of being lost. However, one limitation with this is that an internet required to access Github, meaning it may not be practical in some situations, such as during remote fieldwork.
