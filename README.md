@@ -6,12 +6,12 @@
 
 **a)** Execute the code to produce the paths of two random walks. What do you observe? (10 points)
 
-Both Graphs maps the trajectory of an object/organism across 2-dimensional space, measured as its x and y cooridnates within this space, with time denoted by the gradient of blue of the trajectory line, from the start to the end of the walk.
+Both Graphs map the trajectory of an object/organism across 2-dimensional space, measured as its x and y cooridnates within this space, with time denoted by the gradient of blue of the trajectory line, from the start to the end of the walk.
 There is minimal similarity between the two walks, with any clustering occuring my chance.
 Each time the code is run, new plots are generated.
 Each walk is comprised of 500 steps, with each step being the result of a runif function which gives steps of an equal distance, but in a randomised direction. This randomised direction or 'angle' relative to the last point, is a result of random numbers being generated for the x and y coordinates, within the range of 0 and 2pi. This change in direction or 'angle' is purely the magnitude of change in direction of x relative to y, with the distance being h (the hypotenuse), which is kept constant at 0.25. The time for each step is kept equal to the number of steps that have been taken at that point. 
 Both plots use the same code and functions so are the result of the same process, but giving differnt outputs due to this randomisation of values.
-Overall, this represnts a random process.
+Overall, this represents a random process.
 
 **b)** Investigate the term **random seeds**. What is a random seed and how does it work? (5 points)
 
